@@ -9,7 +9,7 @@ const Home = () => {
 
 			// https://localhost:5000/anime
 
-			const res = await axios.get('https://localhost:5000/anime/800');
+			const res = await axios.get('https://localhost:5000/anime/987');
 			console.log('Data:', res);
 		};
 		FetchTest();
