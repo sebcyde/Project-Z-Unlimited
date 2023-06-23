@@ -13,7 +13,7 @@ import Chat from './Pages/Chat/Chat';
 
 const App = () => {
 	const [Loading, setLoading] = useState(false);
-	const [User, setUser] = useState(false);
+	const [User, setUser] = useState(true);
 
 	return Loading ? (
 		<LoadingScreen />

@@ -2,16 +2,35 @@ import React, { useEffect } from 'react';
 import axios from 'axios';
 
 const Home = () => {
+	const AnimeAPIBase = 'https://localhost:5001/anime';
+
+	const GetAllAnime = async (PageNumber) => {
+		const res = await axios.get(`${AnimeAPIBase}/${PageNumber}`);
+		return res.data;
+	};
+
+	const GetTopAnime = async (PageNumber) => {
+		const res = await axios.get(`${AnimeAPIBase}/top/${PageNumber}`);
+		return res.data;
+	};
+
+	const GetAnimeGenres = async () => {
+		const res = await axios.get(`${AnimeAPIBase}/genres`);
+		return res.data;
+	};
+
 	useEffect(() => {
 		const FetchTest = async () => {
-			// https://localhost:5000/Weather
-			// https://localhost:5000/item/1
+			const all = await GetAllAnime(1);
+			console.log('All:', all);
 
-			// https://localhost:5000/anime
+			const animegenres = await GetAnimeGenres();
+			console.log('Anime Genres:', animegenres);
 
-			const res = await axios.get('https://localhost:5000/anime/987');
-			console.log('Data:', res);
+			const top = await GetTopAnime(1);
+			console.log('Top:', top);
 		};
+
 		FetchTest();
 	}, []);
 

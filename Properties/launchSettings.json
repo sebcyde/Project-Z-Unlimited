@@ -9,13 +9,13 @@
   },
   "profiles": {
     "Project_Z_Unlimited": {
+      "applicationUrl": "http://localhost:5000",
       "commandName": "Project",
-      "launchBrowser": false,
-      "applicationUrl": "https://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.SpaProxy"
-      }
+      },
+      "launchBrowser": false
     },
     "IIS Express": {
       "commandName": "IISExpress",
